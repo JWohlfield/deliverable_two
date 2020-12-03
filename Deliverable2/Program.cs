@@ -40,12 +40,15 @@ namespace Deliverable2
                 int toss = rand.Next(2);
 
                 if(toss == guessIndex) correctCount++;
-                
+
                 Console.WriteLine(sides[toss]);
             }
 
+            double percent = (double)correctCount / numberOfFlips * 100;
+
             Console.WriteLine("\nYour guess, {0}, came up {1} times", headsOrTailsGuess, correctCount);
-            Console.WriteLine(value: "That's " + ((double)correctCount / (double)numberOfFlips).ToString("0.00%"));
+            //Console.WriteLine(value: "That's " + ((double)correctCount / (double)numberOfFlips).ToString("0.00%"));
+            Console.WriteLine($"That's {percent} %");
 
         }
     }
