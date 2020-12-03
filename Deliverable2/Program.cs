@@ -44,7 +44,7 @@ namespace Deliverable2
                 Console.WriteLine(sides[toss]);
             }
 
-            double percent = (double)correctCount / numberOfFlips * 100;
+            double percent = Math.Round((double)correctCount / numberOfFlips * 100,2);
 
             Console.WriteLine("\nYour guess, {0}, came up {1} times", headsOrTailsGuess, correctCount);
             //Console.WriteLine(value: "That's " + ((double)correctCount / (double)numberOfFlips).ToString("0.00%"));
